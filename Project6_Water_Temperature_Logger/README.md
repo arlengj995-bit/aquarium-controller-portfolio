@@ -1,6 +1,7 @@
 # Project 6 – Water Temperature Logger
 
 **DS18B20 probe · DS3231 real-time clock · SD card · Arduino UNO R3**
+
 October 12, 2026
 
 This is the first project in my portfolio that runs on its own. There's no laptop and no Python script. Every 10 seconds the Arduino reads the temperature, gets the date and time from a real-time clock, and saves one line to `log.csv` on an SD card. Afterward I take the card out and graph the data in Excel.
