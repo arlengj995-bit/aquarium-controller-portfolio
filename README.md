@@ -1,7 +1,6 @@
 # Automated Aquarium Controller Portfolio
 
-**Arlen Johnson** · Grade 12, STEM Pathway · Fort Bend ISD, Texas
-Intended major: Electrical Engineering
+**Arlen Johnson** · Grade 12, STEM Pathway 
 
 ## Why I started this
 
