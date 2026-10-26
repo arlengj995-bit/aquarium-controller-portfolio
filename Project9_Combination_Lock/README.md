@@ -6,7 +6,7 @@ October 15, 2026
 
 I type a 4-digit code on the keypad and press `#`. If it's right, the servo turns 90° like a bolt sliding open, the green LED comes on, and the buzzer beeps twice. After 5 seconds it locks itself again. Three wrong codes in a row lock the keypad out for 30 seconds.
 
-![Project 9 build](Project_9_CombinationLock_Photo.jpeg)
+![Project 9 build](Project_9_CombinationLock_Image.jpeg)
 
 ▶️ [Watch the test video](Project_9_CombinationLock_Video.mp4)
 
@@ -35,8 +35,6 @@ The lock is a state machine, like the traffic light in Project 5. The difference
 | UNLOCKED | Servo at 90°, green LED on, relocks after 5 s or `*` |
 | LOCKOUT | Red LED on, all keys ignored for 30 s |
 
-![State diagram](Project_9_CombinationLock_State_Diagram.png)
-
 - **Keypad scanning:** 16 keys use only 8 wires (4 rows + 4 columns). The Keypad library sets one row LOW at a time and checks which column also reads LOW. Sixteen separate buttons would need 16 pins.
 - **Attempt limit:** a 4-digit code has 10,000 combinations. With 3 tries per 30-second lockout, trying them all takes about 10,000 ÷ 3 × 30 s ≈ 28 hours. That isn't real security, but it shows the idea: slowing down guessing matters as much as having a code.
 - **Hiding the code:** Serial Monitor prints `*` for each digit, because printing the real numbers would defeat the point of a lock.
@@ -56,7 +54,7 @@ The keypad uses D2–D9, so I moved the LEDs and buzzer to A0–A2. Analog pins 
 
 | Breadboard (Fritzing) | Schematic (Fritzing) |
 |---|---|
-| ![Breadboard](Project_9_CombinationLock_Breadboard.jpg) | ![Schematic](Project_9_CombinationLock_Schematic.jpg) |
+| ![Breadboard](Project_9_CombinationLock_Breadboard.jpeg) | ![Schematic](Project_9_CombinationLock_Schema.jpeg) |
 
 ## Test results
 
@@ -69,9 +67,15 @@ The keypad uses D2–D9, so I moved the LEDs and buzzer to A0–A2. Analog pins 
 
 These times come from Serial Monitor, so the computer adds them, not the Arduino. They're good enough to check a 5-second and a 30-second timer, but they aren't exact measurements.
 
-| Stage 1: all 16 keys | Stage 2: full lock |
-|---|---|
-| ![Stage 1 Serial Monitor](Project_9_CombinationLock_Stage_1_Serial.png) | ![Stage 2 Serial Monitor](Project_9_CombinationLock_Stage_2_Serial.png) |
+**Stage 1: all 16 keys**
+
+![Stage 1 Serial Monitor](Project_9_CombinationLock_Serial%20Monitor1.png)
+
+**Stage 2: full lock**
+
+![Stage 2 Serial Monitor](Project_9_CombinationLock_Serial_Monitor2.png)
+
+![Stage 2 Serial Monitor, lockout and clear](Project_9_CombinationLock_Serial_Monitor3.png)
 
 ## Problems I ran into
 
@@ -86,10 +90,9 @@ These times come from Serial Monitor, so the computer adds them, not the Arduino
 | `CombinationLock.ino` | Final sketch |
 | `Project_9_CombinationLock_R1.docx` | Full project report |
 | `Project_9_CombinationLock_Video.mp4` | Test video (unlock, wrong code, lockout) |
-| `Project_9_CombinationLock_Photo.jpeg` | Photo of the real build |
-| `Project_9_CombinationLock_Breadboard.jpg`, `Project_9_CombinationLock_Schematic.jpg` | Fritzing breadboard and schematic |
-| `Project_9_CombinationLock_State_Diagram.png` | State diagram |
-| `Project_9_CombinationLock_Stage_1_Serial.png`, `Project_9_CombinationLock_Stage_2_Serial.png` | Serial Monitor screenshots |
+| `Project_9_CombinationLock_Image.jpeg` | Photo of the real build |
+| `Project_9_CombinationLock_Breadboard.jpeg`, `Project_9_CombinationLock_Schema.jpeg` | Fritzing breadboard and schematic |
+| `Project_9_CombinationLock_Serial Monitor1.png`, `Project_9_CombinationLock_Serial_Monitor2.png`, `Project_9_CombinationLock_Serial_Monitor3.png` | Serial Monitor screenshots |
 
 ## What I'd do next time
 
