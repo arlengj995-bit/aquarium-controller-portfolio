@@ -1,6 +1,7 @@
 # Automated Aquarium Controller Portfolio
 
-**Arlen Johnson** · Grade 12, STEM Pathway 
+**Arlen Johnson** · Grade 12, STEM Pathway · Fort Bend ISD, Texas
+Intended major: Electrical Engineering
 
 ## Why I started this
 
@@ -20,9 +21,11 @@ In eleventh grade I bought an ELEGOO UNO R3 Arduino kit to learn electronics on 
 | 4 | Ultrasonic Radar | Measures distance with an ultrasonic sensor, like my VEX sonar. | [Project 4](Project4_Ultrasonic_Radar) |
 | 5 | Traffic Light | Runs lights through a timed order of steps. | [Project 5](Project5_Traffic_Light) |
 | 6 | Water Temperature Logger | Saves water temperature and time to an SD card, no computer needed. | [Project 6](Project6_Water_Temperature_Logger) |
-| 9 | Keypad Combination Lock | Opens a servo "bolt" with a 4-digit code and locks the keypad for 30 s after three wrong tries. | [Project 9](Project9_Combination_Lock) |
+| 9 | Combination Lock | Checks a code typed on a keypad and gives LED and buzzer feedback. | [Project 9](Project9_Combination_Lock) |
 
 ## Still to do
+
+Project numbers follow my build plan, so Project 9 was finished before 7 and 8.
 
 | # | Project | Status | Why I need it |
 |---|---|---|---|
@@ -34,7 +37,6 @@ In eleventh grade I bought an ELEGOO UNO R3 Arduino kit to learn electronics on 
 
 - **Project 3:** At low PWM values the motor just hummed. It needed a certain amount of power before it would start turning.
 - **Project 6:** Some times in my log file went backward. The clock was resetting every time the Arduino restarted, so the data looked fine but was wrong.
-- **Project 9:** The upload got stuck and the board went dark. A rubber band left on the servo arm jammed it, and the stalled servo pulled more power than USB could give. My pumps and lights will need their own supply.
 
 My next step is Project 7, the grow light.
 
